@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว | My Portfolio</title>
+    
+    <!-- Google Fonts: Outfit (English) & Sarabun (Thai) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Decor Elements -->
+    <div class="bg-decor bg-decor-1"></div>
+    <div class="bg-decor bg-decor-2"></div>
+    <div class="bg-decor bg-decor-3"></div>
+
+    <div class="container">
+        <!-- Profile Header Section -->
+        <header class="profile-header">
+            <div class="avatar-container">
+                <img src="c:\Users\kanta\Downloads\Gemini_Generated_Image_smht4msmht4msmht.png" alt="รูปโปรไฟล์" class="profile-avatar">
+                <div class="status-badge">
+                    <span class="status-dot"></span> พร้อมรับงาน
+                </div>
+            </div>
+            <h1 class="profile-name">Wally Lila</h1>
+            <p class="profile-title">Network Engineer & Infrastructure Specialist</p>
+            <p class="profile-bio">วิศวกรเครือข่ายผู้เชี่ยวชาญด้านการออกแบบ ติดตั้ง และดูแลระบบโครงสร้างพื้นฐานไอทีขนาดใหญ่ให้เสถียรและปลอดภัย</p>
+            
+            <div class="quick-links">
+                <a href="mailto:wally.lila@example.com" title="อีเมล"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://github.com/WallyLila" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <!--<a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>-->
+            </div>
+        </header>
+
+        <!-- Menu / Dashboard Buttons -->
+        <main class="menu-grid">
+            <!-- Card 1: เกี่ยวกับฉัน -->
+            <button class="menu-card" data-modal-target="about-modal" id="btn-about">
+                <div class="card-icon icon-about">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="card-info">
+                    <h3>เกี่ยวกับฉัน</h3>
+                    <p>ประวัติส่วนตัว ความสนใจ และความเป็นมา</p>
+                </div>
+                <div class="card-arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </button>
+
+            <!-- Card 2: ทักษะความสามารถ -->
+            <button class="menu-card" data-modal-target="skills-modal" id="btn-skills">
+                <div class="card-icon icon-skills">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="card-info">
+                    <h3>ทักษะความสามารถ</h3>
+                    <p>เครื่องมือ เทคโนโลยี และระดับความชำนาญ</p>
+                </div>
+                <div class="card-arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </button>
+
+            <!-- Card 3: ผลงานที่มี -->
+            <button class="menu-card" data-modal-target="portfolio-modal" id="btn-portfolio">
+                <div class="card-icon icon-portfolio">
+                    <i class="fa-regular fa-folder-open"></i>
+                </div>
+                <div class="card-info">
+                    <h3>ผลงานเด่น</h3>
+                    <p>โครงการ โปรเจกต์ และงานออกแบบที่ผ่านมา</p>
+                </div>
+                <div class="card-arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </button>
+
+            <!-- Card 4: ข้อมูลติดต่อ -->
+            <button class="menu-card" data-modal-target="contact-modal" id="btn-contact">
+                <div class="card-icon icon-contact">
+                    <i class="fa-regular fa-address-book"></i>
+                </div>
+                <div class="card-info">
+                    <h3>ข้อมูลติดต่อ</h3>
+                    <p>ส่งข้อความหาฉัน หรือช่องทางออนไลน์ต่างๆ</p>
+                </div>
+                <div class="card-arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </button>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2026 Wally Lila. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MODAL WINDOWS                                  -->
+    <!-- ============================================== -->
+
+    <!-- Modal 1: เกี่ยวกับฉัน -->
+    <div class="modal-overlay" id="about-modal">
+        <div class="modal-window">
+            <header class="modal-header">
+                <div class="modal-title-group">
+                    <div class="modal-title-icon"><i class="fa-regular fa-user"></i></div>
+                    <h2>เกี่ยวกับฉัน</h2>
+                </div>
+                <button class="close-modal-btn" aria-label="ปิดหน้าต่าง">&times;</button>
+            </header>
+            <div class="modal-body scrollable">
+                <div class="about-grid">
+                    <div class="about-image-side">
+                        <img src="assets/profile.jpg" alt="รูปโปรไฟล์" class="about-img">
+                        <div class="about-status-card">
+                            <h4>"ความประทับใจแรกสร้างได้จากหน้าเว็บที่ใส่ใจรายละเอียด"</h4>
+                        </div>
+                    </div>
+                    <div class="about-text-side">
+                        <h3>ประวัติส่วนตัวโดยย่อ</h3>
+                        <p>สวัสดีครับ! ผม Wally Lila วิศวกรเครือข่าย (Network Engineer) ที่มีความเชี่ยวชาญในการออกแบบ จัดการ และบำรุงรักษาระบบโครงสร้างพื้นฐานเครือข่าย (Network Infrastructure) รวมถึงระบบความปลอดภัยและการเชื่อมต่อระบบคลาวด์ครับ</p>
+                        
+                        <p>ผมมุ่งมั่นที่จะพัฒนาสถาปัตยกรรมเครือข่ายที่มีเสถียรภาพสูง ทนทานต่อความล้มเหลว (Fault Tolerance) ปลอดภัยจากการคุกคามทางไซเบอร์ และสามารถขยายขนาดเพื่อตอบโจทย์ทางธุรกิจได้อย่างยั่งยืน</p>
+                        
+                        <div class="personal-info-list">
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-graduation-cap"></i> การศึกษา:</span>
+                                <span class="info-value">วิศกรรมคอมพิวเตอร์, มหาวิทยาลัยนคพนม</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-location-dot"></i> ที่อยู่ปัจจุบัน:</span>
+                                <span class="info-value">นครพนม, ประเทศไทย</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-briefcase"></i> ตำแหน่ง:</span>
+                                <span class="info-value">Network Engineer (Freelance / Full-time)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-heart"></i> ความสนใจ:</span>
+                                <span class="info-value">Network Security, Cloud Architecture, IoT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: ทักษะความสามารถ -->
+    <div class="modal-overlay" id="skills-modal">
+        <div class="modal-window">
+            <header class="modal-header">
+                <div class="modal-title-group">
+                    <div class="modal-title-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h2>ทักษะความสามารถ</h2>
+                </div>
+                <button class="close-modal-btn" aria-label="ปิดหน้าต่าง">&times;</button>
+            </header>
+            <div class="modal-body scrollable">
+                <div class="skills-intro">
+                    <p>ทักษะและความรู้ความชำนาญด้านต่างๆ ของผม ซึ่งผ่านการประยุกต์ใช้ในการทำงานจริงและการศึกษาค้นคว้าอย่างต่อเนื่อง</p>
+                </div>
+                
+                <div class="skills-container-grid">
+                    <!-- Routing & Switching -->
+                    <div class="skills-category-card">
+                        <h3><i class="fa-solid fa-route"></i> Routing & Switching</h3>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-info">
+                                <span>Cisco IOS / Junos OS (CLI)</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="--percent: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-info">
+                                <span>OSPF / BGP Dynamic Routing</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="--percent: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-info">
+                                <span>VLANs / Spanning Tree (STP)</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="--percent: 95%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Network Security -->
+                    <div class="skills-category-card">
+                        <h3><i class="fa-solid fa-shield-halved"></i> Network Security</h3>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-info">
+                                <span>Firewalls (Fortinet / Palo Alto)</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="--percent: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-info">
+                                <span>IPsec VPN / SSL-VPN</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="--percent: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-info">
+                                <span>Access Control Lists & NAT</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="--percent: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Infrastructure & Tools -->
+                    <div class="skills-category-card">
+                        <h3><i class="fa-solid fa-server"></i> Infrastructure & Tools</h3>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-info">
+                                <span>Wireshark & Packet Analysis</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="--percent: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-info">
+                                <span>Zabbix / Prometheus Monitoring</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="--percent: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-info">
+                                <span>AWS & Cloud Networking</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="--percent: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: ผลงานที่มี -->
+    <div class="modal-overlay" id="portfolio-modal">
+        <div class="modal-window">
+            <header class="modal-header">
+                <div class="modal-title-group">
+                    <div class="modal-title-icon"><i class="fa-regular fa-folder-open"></i></div>
+                    <h2>ผลงานเด่น</h2>
+                </div>
+                <button class="close-modal-btn" aria-label="ปิดหน้าต่าง">&times;</button>
+            </header>
+            <div class="modal-body scrollable">
+                <!-- Portfolio Filter -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+                    <button class="filter-btn" data-filter="net-design">Network Design</button>
+                    <button class="filter-btn" data-filter="security">Security & Cloud</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="net-design">
+                        <div class="project-thumbnail project-thumb-1">
+                            <span class="project-tag">Network Design</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Enterprise SD-WAN Migration</h3>
+                            <p>การออกแบบสถาปัตยกรรมเครือข่าย SD-WAN เพื่อเชื่อมต่อสาขาย่อยกว่า 20 แห่งเข้าด้วยกัน เพิ่มประสิทธิภาพการส่งผ่านข้อมูลและความเสถียรสูง</p>
+                            <div class="project-tech">
+                                <span>Cisco SD-WAN</span>
+                                <span>BGP</span>
+                                <span>IPsec</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="security">
+                        <div class="project-thumbnail project-thumb-2">
+                            <span class="project-tag">Security</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Next-Gen Firewall Implementation</h3>
+                            <p>ติดตั้งและปรับแต่งระบบไฟร์วอลล์ Palo Alto เพื่อคัดกรองทราฟฟิก กำหนดสิทธิ์การเข้าถึง และการตรวจจับภัยคุกคาม (IDS/IPS) ทั่วทั้งองค์กร</p>
+                            <div class="project-tech">
+                                <span>Palo Alto NGFW</span>
+                                <span>SSL Decryption</span>
+                                <span>NAT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="security">
+                        <div class="project-thumbnail project-thumb-3">
+                            <span class="project-tag">Cloud Net</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Hybrid Cloud Infrastructure</h3>
+                            <p>ออกแบบและติดตั้งระบบเครือข่ายบน AWS (VPC, Transit Gateway) เชื่อมต่อแบบ Direct Connect เข้ากับ On-premise Datacenter อย่างเสถียร</p>
+                            <div class="project-tech">
+                                <span>AWS VPC</span>
+                                <span>Direct Connect</span>
+                                <span>Terraform</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: ข้อมูลติดต่อ -->
+    <div class="modal-overlay" id="contact-modal">
+        <div class="modal-window">
+            <header class="modal-header">
+                <div class="modal-title-group">
+                    <div class="modal-title-icon"><i class="fa-regular fa-address-book"></i></div>
+                    <h2>ข้อมูลติดต่อ</h2>
+                </div>
+                <button class="close-modal-btn" aria-label="ปิดหน้าต่าง">&times;</button>
+            </header>
+            <div class="modal-body scrollable">
+                <div class="contact-grid">
+                    <!-- Contact Information Cards -->
+                    <div class="contact-info-side">
+                        <h3>พูดคุยเกี่ยวกับโปรเจกต์ของคุณ</h3>
+                        <p>หากคุณต้องการพัฒนาโปรเจกต์ใหม่ ปรึกษาเรื่องการออกแบบ หรือเพียงแค่ต้องการทักทาย สามารถติดต่อผมได้ทันทีผ่านช่องทางเหล่านี้ครับ</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-regular fa-envelope"></i></div>
+                                <div class="detail-text">
+                                    <h4>อีเมล</h4>
+                                    <p>wally.lila@example.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="detail-text">
+                                    <h4>เบอร์โทรศัพท์</h4>
+                                    <p>012-345-6789</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="detail-text">
+                                    <h4>สถานที่ติดต่อ</h4>
+                                    <p>กรุงเทพมหานคร, ประเทศไทย</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-social-section">
+                            <h4>ติดตามผลงานเพิ่มเติมได้ที่</h4>
+                            <div class="social-pills">
+                                <a href="https://github.com/WallyLila" target="_blank" class="social-pill github"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <!--<a href="https://linkedin.com" target="_blank" class="social-pill linkedin"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-side">
+                        <h3>ส่งข้อความโดยตรง</h3>
+                        <form id="contact-form" class="modern-form" onsubmit="event.preventDefault(); alert('ส่งข้อมูลสำเร็จ! ขอขอบพระคุณสำหรับข้อความครับ'); this.reset();">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">ชื่อของคุณ</label>
+                                    <input type="text" id="form-name" placeholder="ระบุชื่อของคุณ" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">อีเมลผู้ติดต่อ</label>
+                                    <input type="email" id="form-email" placeholder="email@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject">หัวเรื่อง</label>
+                                <input type="text" id="form-subject" placeholder="หัวเรื่องข้อความ" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">ข้อความรายละเอียด</label>
+                                <textarea id="form-message" rows="5" placeholder="พิมพ์รายละเอียดข้อความของคุณที่นี่..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                ส่งข้อความ <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
